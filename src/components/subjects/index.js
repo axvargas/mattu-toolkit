@@ -6,15 +6,14 @@ import { Typography, Grid, Container } from '@material-ui/core';
 //style imports
 import useStyles from './style';
 //hooks imports
-import useSubjects from '../../hooks/useSubjects';
+//import useSubjects from '../../hooks/useSubjects';
 
 
 const Subjects = () => {
     const classes = useStyles();
 
-    const subjects = useSubjects();
-    console.log(subjects);
-
+    //const subjects = useSubjects();
+    
     return (
         <Container className={classes.container}>
             <Grid container justify="center" alignItems="flex-start" spacing={3}>

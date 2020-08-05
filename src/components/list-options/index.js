@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function NestedList() {
+export default function NestedList({linkTool, linkExample, linkTutorial,}) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
 
@@ -42,19 +42,19 @@ export default function NestedList() {
       className={classes.root}
     >
       <ListItem button>
-        <ListItemIcon>
+        <ListItemIcon href={linkTool}>
           <CategoryIcon />
         </ListItemIcon>
         <ListItemText primary="Quiero probarlo!" />
       </ListItem>
       <ListItem button>
-        <ListItemIcon>
+        <ListItemIcon href={linkTutorial}>
           <MenuBookIcon />
         </ListItemIcon>
         <ListItemText primary="¿Cómo se usa?" />
       </ListItem>
       <ListItem button>
-        <ListItemIcon>
+        <ListItemIcon href={linkExample}>
           <FindInPageIcon />
         </ListItemIcon>
         <ListItemText primary="Quiero ver ejemplos!" />

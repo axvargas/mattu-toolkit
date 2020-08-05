@@ -16,6 +16,8 @@ import ShareIcon from "@material-ui/icons/Share";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import ListOptions from "../list-options";
+
+import Image from "gatsby-image";
 const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: "100%"
@@ -38,8 +40,14 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function RecipeReviewCard() {
+export default function RecipeReviewCard({tool}) {
   const classes = useStyles();
+  /*/const {name,
+    content,
+    linkTool,
+    linkExample,
+    linkTutorial,
+    image} = tool*/
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -49,16 +57,19 @@ export default function RecipeReviewCard() {
   return (
     <Card className={classes.root}>
       <CardMedia
+        //component={Image}
+        //alt={name}
+        //fluid={image.fluid}
         className={classes.media}
         image="https://i.pinimg.com/originals/bb/22/9a/bb229a5d9f2775353c4aec2a9c66e622.jpg"
-        title="Paella dish"
+        //title={name}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">
-          Herramienta
+          {"name"}
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
-          Esta herramienta le permite tener a mano
+          {"content"}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -80,7 +91,7 @@ export default function RecipeReviewCard() {
         </IconButton>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <ListOptions />
+        <ListOptions linkTool linkExample linkTutorial/>
       </Collapse>
     </Card>
   );

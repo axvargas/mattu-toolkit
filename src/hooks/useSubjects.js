@@ -1,8 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 const useSubjects = () => {
   const data = useStaticQuery(graphql`
-    {
-        allDatoCmsSubject {
+    {allDatoCmsSubject {
           nodes {
             id
             name
@@ -14,10 +13,7 @@ const useSubjects = () => {
               }
             }
           }
-        }
-      }
-      
-    `);
+        }}`);
 
   return data.allDatoCmsSubject.nodes
 

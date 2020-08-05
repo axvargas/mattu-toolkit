@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 export default function MediaCard({subject}) {
   const classes = useStyles();
   const {name, content, image, id, slug} = subject
-  console.log(subject);
+  //console.log(subject);
   return (
     <Card className={classes.root}>
       <CardMedia 
@@ -40,7 +40,7 @@ export default function MediaCard({subject}) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Dialog />
+        <Dialog subjectId={id}/>
       </CardActions>
     </Card>
   );
