@@ -20,7 +20,8 @@ import ListOptions from "../list-options";
 import Image from "gatsby-image";
 const useStyles = makeStyles(theme => ({
   root: {
-    maxWidth: "100%"
+    //maxWidth: "60%"
+    width: "350px"
   },
   media: {
     paddingTop: "100%" // 16:9
@@ -42,34 +43,34 @@ const useStyles = makeStyles(theme => ({
 
 export default function RecipeReviewCard({tool}) {
   const classes = useStyles();
-  /*/const {name,
+  const {name,
     content,
     linkTool,
     linkExample,
     linkTutorial,
-    image} = tool*/
+    image} = tool
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-
+  //console.log(tool);
   return (
     <Card className={classes.root}>
       <CardMedia
-        //component={Image}
-        //alt={name}
-        //fluid={image.fluid}
+        component={Image}
+        alt={name}
+        fluid={image.fluid}
         className={classes.media}
-        image="https://i.pinimg.com/originals/bb/22/9a/bb229a5d9f2775353c4aec2a9c66e622.jpg"
-        //title={name}
+        title={name}
+        //image="https://i.pinimg.com/originals/bb/22/9a/bb229a5d9f2775353c4aec2a9c66e622.jpg"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">
-          {"name"}
+          {name}
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
-          {"content"}
+          {content}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -91,7 +92,7 @@ export default function RecipeReviewCard({tool}) {
         </IconButton>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <ListOptions linkTool linkExample linkTutorial/>
+        <ListOptions linkTool={linkTool} linkExample={linkExample} linkTutorial={linkTutorial}/>
       </Collapse>
     </Card>
   );

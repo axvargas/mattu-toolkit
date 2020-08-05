@@ -11,17 +11,18 @@ import Image from "gatsby-image";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: "60%"
+    //maxWidth: "60%"
+    width: "350px"
   },
   media: {
     //paddingTop: "25%" // 16:9
   }
 });
 
-export default function MediaCard({subject}) {
+export default function MediaCard({subject, tools}) {
   const classes = useStyles();
   const {name, content, image, id, slug} = subject
-  //console.log(subject);
+  
   return (
     <Card className={classes.root}>
       <CardMedia 
@@ -40,7 +41,7 @@ export default function MediaCard({subject}) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Dialog subjectId={id}/>
+        <Dialog tools={tools}/>
       </CardActions>
     </Card>
   );

@@ -14,7 +14,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import Slide from "@material-ui/core/Slide";
 import Grid from "@material-ui/core/Grid";
 import Tool from "../tool-card";
-//import useTools from '../../hooks/useTools';
+//
 const useStyles = makeStyles(theme => ({
   appBar: {
     position: "relative"
@@ -32,7 +32,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function FullScreenDialog({subjectId}) {
+export default function FullScreenDialog({tools}) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   //const tools = useTools(subjectId);
@@ -43,7 +43,7 @@ export default function FullScreenDialog({subjectId}) {
   const handleClose = () => {
     setOpen(false);
   };
-
+  //console.log(tools);
   return (
     <div>
       <Button size="medium" color="primary" onClick={handleClickOpen}>
@@ -73,9 +73,9 @@ export default function FullScreenDialog({subjectId}) {
         </AppBar>
         <div className={classes.root}>
           <Grid container justify="center" alignItems="center" spacing={3}>
-            {[1, 2, 3].map(e => (
-              <Grid container justify="center" item xs={12} key={e}>
-                <Tool />
+            {tools.map(tool => (
+              <Grid container justify="center" item xs={12} key={tool.id}>
+                <Tool tool={tool}/>
               </Grid>
             ))}
           </Grid>

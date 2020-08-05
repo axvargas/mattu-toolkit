@@ -41,19 +41,19 @@ export default function NestedList({linkTool, linkExample, linkTutorial,}) {
       aria-labelledby="nested-list-subheader"
       className={classes.root}
     >
-      <ListItem button>
-        <ListItemIcon href={linkTool}>
+      <ListItem button onClick={(e)=>{window.open(linkTool,'_blank')}}>
+        <ListItemIcon>
           <CategoryIcon />
         </ListItemIcon>
         <ListItemText primary="Quiero probarlo!" />
       </ListItem>
-      <ListItem button>
+      <ListItem button onClick={(e)=>{window.open(linkTutorial,'_blank')}}>
         <ListItemIcon href={linkTutorial}>
           <MenuBookIcon />
         </ListItemIcon>
         <ListItemText primary="¿Cómo se usa?" />
       </ListItem>
-      <ListItem button>
+      <ListItem button onClick={(e)=>{window.open(linkExample,'_blank')}}>
         <ListItemIcon href={linkExample}>
           <FindInPageIcon />
         </ListItemIcon>
