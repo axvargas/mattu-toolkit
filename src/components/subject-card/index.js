@@ -7,33 +7,36 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Dialog from "../full-dialog-btn";
+import Image from "gatsby-image";
 
 const useStyles = makeStyles({
   root: {
     maxWidth: "60%"
   },
   media: {
-    paddingTop: "100%" // 16:9
+    //paddingTop: "25%" // 16:9
   }
 });
 
-export default function MediaCard() {
+export default function MediaCard({subject}) {
   const classes = useStyles();
-
+  const {name, content, image, id, slug} = subject
+  console.log(subject);
   return (
     <Card className={classes.root}>
-      <CardMedia
+      <CardMedia 
+        component={Image}
+        alt={name}
+        fluid={image.fluid}
         className={classes.media}
-        image="https://i.pinimg.com/originals/bb/22/9a/bb229a5d9f2775353c4aec2a9c66e622.jpg"
-        title="Contemplative Reptile"
+        title={name}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">
-          Biología
+          {name}
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
-          Herramientas para x también para realizar tareas de y, además de tener
-          apartados para z.
+          {content}
         </Typography>
       </CardContent>
       <CardActions>

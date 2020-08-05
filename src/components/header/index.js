@@ -22,18 +22,13 @@ const Header = ({ props }) => {
                     <Hidden mdUp>
                         <Grid container justify="center">
                             <Toolbar >
-
                                 <Typography variant="h5" className={classes.typo}>
                                     <GatsbyLink to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                        Mattu Hotel
+                                        Herramientas para tus clases virtuales
                                 </GatsbyLink>
-
                                 </Typography>
-
-
                             </Toolbar>
                         </Grid>
-                 
                     </Hidden>
                     {/* Mobile Section */}
                     <Hidden smDown>
@@ -43,7 +38,7 @@ const Header = ({ props }) => {
                                 <Toolbar className={classes.title}>
                                     <Typography variant="h5" className={classes.typo} >
                                         <GatsbyLink to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                            Mattu ToolTip
+                                        Herramientas para tus clases virtuales
                                     </GatsbyLink>
                                     </Typography>
                                 </Toolbar>

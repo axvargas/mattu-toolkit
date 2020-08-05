@@ -21,11 +21,7 @@ const Subjects = () => {
                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                     <Typography variant="h4" gutterBottom className={classes.typo}>Find the perfect tool for you</Typography>
                 </Grid>
-                {subjects.map(subject => (
-                    <h1 key={subject.id}>{subject.name}</h1>
-                ))}
             </Grid>
-
         </Container>
     );
 }

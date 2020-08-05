@@ -2,10 +2,12 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Subject from "./subject-card";
+import useSubjects from '../hooks/useSubjects';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    padding: "10px",
   },
   paper: {
     padding: theme.spacing(1),
@@ -16,13 +18,14 @@ const useStyles = makeStyles(theme => ({
 
 export default function NestedGrid() {
   const classes = useStyles();
+  const subjects = useSubjects();
 
   return (
     <div className={classes.root}>
       <Grid container justify="center" alignItems="center" spacing={3}>
-        {[1, 2, 3, 4, 5, 6, 7].map(e => (
-          <Grid container justify="center" item xs={6} key={e}>
-            <Subject />
+        {subjects.map(element => (
+          <Grid container justify="center" item xs={6} key={element.id}>
+            <Subject subject={element}/>
           </Grid>
         ))}
       </Grid>

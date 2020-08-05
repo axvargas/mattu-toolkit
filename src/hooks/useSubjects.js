@@ -9,7 +9,7 @@ const useSubjects = () => {
             slug
             content
             image {
-              fluid((maxWidth: 1200) {
+              fluid(maxWidth: 1200) {
                 ...GatsbyDatoCmsFluid
               }
             }

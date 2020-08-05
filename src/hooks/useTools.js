@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 const useTools = (slug) => {
-  const data = useStaticQuery(graphql`
+  /*const data = useStaticQuery(graphql`
     {
       {
         allDatoCmsTool(filter: {subject: {slug: {eq: ${slug}}}}) {
@@ -15,7 +15,7 @@ const useTools = (slug) => {
       }
       
       
-    `);
+    `);*/
 
   return data.allDatoCmsTool.nodes
 

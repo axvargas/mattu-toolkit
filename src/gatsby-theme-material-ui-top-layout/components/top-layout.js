@@ -16,7 +16,7 @@ export default function TopLayout({ theme, children }) {
             <Helmet>
                 <title>
                     {/* {title} */}
-                    toolkit
+                    Toolkit
                 </title>
                 <meta
                     name="description"
