@@ -12,7 +12,17 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bold',
         textAlign: 'center',
 
-    }
+    },
+    fab: {
+      margin: theme.spacing(1)
+    },
+    extendedIcon: {
+      marginRight: theme.spacing(1),
+    },
+    tooltip: {
+        marginLeft: 'auto',
+		marginRight: 0,
+    },
 
 }));
 export default useStyles;

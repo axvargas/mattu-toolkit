@@ -14,6 +14,10 @@ export default function Footer() {
                     <Link color="primary" target="_blank" href="https://github.com/axvargas">
                         MattuApp &copy;
                     </Link>
+                    &
+                    <Link color="primary" target="_blank" href="https://github.com/jcoboss">
+                        jcoboss &copy;
+                    </Link>
                 </Typography>
             </Container>
 
