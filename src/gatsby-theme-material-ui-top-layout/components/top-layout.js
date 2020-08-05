@@ -4,6 +4,8 @@ import ThemeTopLayout from "gatsby-theme-material-ui-top-layout/src/components/t
 //Helmet import
 import { Helmet } from 'react-helmet';
 
+import Header from '../../components/header';
+import Footer from '../../components/footer';
 
 
 export default function TopLayout({ theme, children }) {
@@ -22,9 +24,9 @@ export default function TopLayout({ theme, children }) {
                     content={"toolkit"}
                 />
             </Helmet>
-
+            <Header />
             {children}
-
+            <Footer />
         </ThemeTopLayout>
     );
 }
