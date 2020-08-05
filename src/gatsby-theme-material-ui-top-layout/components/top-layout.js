@@ -7,21 +7,20 @@ import { Helmet } from 'react-helmet';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 
+import useSeo from '../../hooks/useSeo';
 
 export default function TopLayout({ theme, children }) {
-    // const seo = useSeo();
-    // const { fallbackSeo: { title, description } } = seo;
+    const seo = useSeo();
+    const { fallbackSeo: { title, description } } = seo;
     return (
         <ThemeTopLayout theme={theme}>
             <Helmet>
                 <title>
-                    {/* {title} */}
-                    Toolkit
+                    {title}
                 </title>
                 <meta
                     name="description"
-                    // content={description}
-                    content={"toolkit"}
+                    content={description}
                 />
             </Helmet>
             <Header />
