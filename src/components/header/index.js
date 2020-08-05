@@ -43,7 +43,7 @@ const Header = ({ props }) => {
                                 <Toolbar className={classes.title}>
                                     <Typography variant="h5" className={classes.typo} >
                                         <GatsbyLink to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                            Mattu Hotel
+                                            Mattu ToolTip
                                     </GatsbyLink>
                                     </Typography>
                                 </Toolbar>
