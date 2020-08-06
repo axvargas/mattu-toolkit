@@ -29,7 +29,7 @@ const ImageHotel = () => {
                     <Grid container direction="row" justify="center" alignItems="center" spacing={3}>
 
                         <Grid item xl={3} lg={4} md={4} sm={10} xs={10}>
-                            <Grid container direction="column" justify="flex-start" alignItems="flex-start" spacing={3} >
+                            <Grid container direction="column" justify="flex-start" alignItems="    " spacing={3} >
                                 <Grid item>
                                     <Typography variant="h3" className={classes.typoP}>Bienvenido!</Typography>
                                 </Grid>
