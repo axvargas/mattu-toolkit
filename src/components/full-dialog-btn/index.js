@@ -14,6 +14,8 @@ import CloseIcon from "@material-ui/icons/Close";
 import Slide from "@material-ui/core/Slide";
 import Grid from "@material-ui/core/Grid";
 import Tool from "../tool-card";
+
+import PostTemplate from '../disqus';
 //
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -32,7 +34,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function FullScreenDialog({tools}) {
+export default function FullScreenDialog({ tools, subject }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   //const tools = useTools(subjectId);
@@ -75,11 +77,12 @@ export default function FullScreenDialog({tools}) {
           <Grid container justify="center" alignItems="center" spacing={3}>
             {tools.map(tool => (
               <Grid container justify="center" item xs={12} key={tool.id}>
-                <Tool tool={tool}/>
+                <Tool tool={tool} />
               </Grid>
             ))}
           </Grid>
         </div>
+        {/* <PostTemplate subject={subject} /> */}
       </Dialog>
     </div>
   );

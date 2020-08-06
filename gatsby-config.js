@@ -43,6 +43,12 @@ module.exports = {
         disableLiveReload: false,
 
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `pol-toolkit-netlify-app`
+      }
+    },
   ],
 }

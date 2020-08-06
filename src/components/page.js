@@ -4,6 +4,8 @@ import Grid from "@material-ui/core/Grid";
 import Subject from "./subject-card";
 import useSubjects from '../hooks/useSubjects';
 import useTools from '../hooks/useTools';
+import PostTemplate from './disqus';
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -26,12 +28,14 @@ export default function NestedGrid() {
       <Grid container justify="center" alignItems="center" spacing={3}>
         {subjects.map(subject => (
           <Grid container justify="center" item xs={6} key={subject.id}>
-            <Subject subject={subject} 
-            tools={allTools.filter(tool => tool.subject.name === subject.name)
-            }/>
+            <Subject subject={subject}
+              tools={allTools.filter(tool => tool.subject.name === subject.name)
+              } />
           </Grid>
         ))}
+
       </Grid>
+      <PostTemplate />
     </div>
   );
 }
