@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 
 import Header from '../../components/header';
 import Footer from '../../components/footer';
-
+import Hero from '../../components/hero';
 import useSeo from '../../hooks/useSeo';
 
 export default function TopLayout({ theme, children }) {
@@ -24,6 +24,7 @@ export default function TopLayout({ theme, children }) {
                 />
             </Helmet>
             <Header />
+            <Hero />
             {children}
             <Footer />
         </ThemeTopLayout>

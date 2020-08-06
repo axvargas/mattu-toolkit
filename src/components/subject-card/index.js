@@ -4,7 +4,6 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Dialog from "../full-dialog-btn";
 import Image from "gatsby-image";
@@ -17,7 +16,7 @@ const useStyles = makeStyles({
 
 export default function MediaCard({ subject, tools }) {
   const classes = useStyles();
-  const { name, content, image, id, slug } = subject
+  const { name, content, image } = subject
 
   return (
     <Card className={classes.root}>

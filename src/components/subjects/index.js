@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 //material ui imports
 import { Typography, Grid, Container } from '@material-ui/core';

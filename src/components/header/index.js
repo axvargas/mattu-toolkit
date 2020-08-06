@@ -65,7 +65,7 @@ const Header = ({ props }) => {
                     </Hidden>
                 </AppBar>
             </ElevationScroll>
-            <Hidden mdUp>
+            <Hidden smUp>
                 <Toolbar />
             </Hidden>
             <Toolbar />
