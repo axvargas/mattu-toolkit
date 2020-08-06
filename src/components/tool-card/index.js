@@ -15,11 +15,14 @@ import ListOptions from "../list-options";
 import Image from "gatsby-image";
 const useStyles = makeStyles(theme => ({
   root: {
-    //maxWidth: "60%"
-    width: "100%"
+    width: "400px",
+    //height: "650px"
   },
-  media: {
-    paddingTop: "100%" // 16:9
+  cardMedia:{
+    height: "400px"
+  },
+  cardContent:{
+    height: "100px"
   },
   expand: {
     transform: "rotate(0deg)",
@@ -60,8 +63,9 @@ export default function RecipeReviewCard({ tool }) {
         alt={name}
         fluid={image.fluid}
         title={name}
+        className={classes.cardMedia}
       />
-      <CardContent>
+      <CardContent className={classes.cardContent}>
         <Typography gutterBottom variant="h5" component="h2">
           {name}
         </Typography>

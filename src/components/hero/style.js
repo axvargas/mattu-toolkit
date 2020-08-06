@@ -14,14 +14,14 @@ const useStyles = makeStyles((theme) => ({
 
     },
     typoP: {
-        textAlign: 'left',
+        textAlign: 'justify',
         fontWeight: 'bold',
         [theme.breakpoints.down('sm')]: {
             textAlign: 'center',
         },
     },
     typo: {
-        textAlign: 'left',
+        textAlign: 'justify',
         [theme.breakpoints.down('sm')]: {
             textAlign: 'center',
         },

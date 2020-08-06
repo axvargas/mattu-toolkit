@@ -10,8 +10,15 @@ import Image from "gatsby-image";
 
 const useStyles = makeStyles({
   root: {
-    width: "100%"
+    width: "400px",
+    //height: "650px"
   },
+  cardMedia:{
+    height: "400px"
+  },
+  cardContent:{
+    height: "175px"
+  }
 });
 
 export default function MediaCard({ subject, tools }) {
@@ -25,8 +32,9 @@ export default function MediaCard({ subject, tools }) {
         alt={name}
         fluid={image.fluid}
         title={name}
+        className={classes.cardMedia}
       />
-      <CardContent>
+      <CardContent className={classes.cardContent}>
         <Typography gutterBottom variant="h5" component="h2">
           {name}
         </Typography>

@@ -14,6 +14,7 @@ import ElevationScroll from './elevationScroll';
 //style imports
 import useStyles from './style';
 const formlink = "https://docs.google.com/forms/d/e/1FAIpQLSeL6p9N1ZwHgiFuzkfel6HObNr1LsRjxPqvdJfu2DVEy-31cw/viewform?usp=sf_link"
+const logoRuta = "../../images/favicon2.png";
 const Header = ({ props }) => {
     const classes = useStyles();
 
@@ -25,10 +26,11 @@ const Header = ({ props }) => {
                     <Hidden mdUp>
                         <Grid container justify="center">
                             <Toolbar >
+                                <img src={logoRuta} alt="Logo" />
                                 <Typography variant="h5" className={classes.typo}>
                                     <GatsbyLink to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}>
                                         Herramientas para tus clases virtuales
-                                </GatsbyLink>
+                                    </GatsbyLink>
                                 </Typography>
                                 
                             </Toolbar>
