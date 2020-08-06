@@ -30,12 +30,15 @@ const Header = ({ props }) => {
                                         Herramientas para tus clases virtuales
                                 </GatsbyLink>
                                 </Typography>
+                                
+                            </Toolbar>
+                            <Toolbar>
                                 <Tooltip title="Ayúdanos a mejorar" aria-label="help" className={classes.tooltip}>
-                                        <Fab onClick={(e)=>{window.open(formlink,'_blank')}}variant="extended" size="medium" className={classes.fab} color="secondary">
-                                            <ThumbsUpDownIcon className={classes.extendedIcon} />
-            Ayúdanos
-            </Fab>
-                                    </Tooltip>
+                                    <Fab onClick={(e) => { window.open(formlink, '_blank') }} variant="extended" size="medium" className={classes.fab} color="secondary">
+                                        <ThumbsUpDownIcon className={classes.extendedIcon} />
+                                        {/* Ayúdanos */}
+                                    </Fab>
+                                </Tooltip>
                             </Toolbar>
                         </Grid>
                     </Hidden>
@@ -51,11 +54,11 @@ const Header = ({ props }) => {
                                     </GatsbyLink>
                                     </Typography>
                                     <Tooltip title="Ayúdanos a mejorar" aria-label="help" className={classes.tooltip}>
-                                            <Fab onClick={(e)=>{window.open(formlink,'_blank')}} variant="extended" size="medium" className={classes.fab} color="secondary">
-                                                <ThumbsUpDownIcon className={classes.extendedIcon} />
-                                    Ayúdanos
-                                    </Fab>
-                                        </Tooltip>
+                                        <Fab onClick={(e) => { window.open(formlink, '_blank') }} variant="extended" size="medium" className={classes.fab} color="secondary">
+                                            <ThumbsUpDownIcon className={classes.extendedIcon} />
+                                             Ayúdanos
+                                        </Fab>
+                                    </Tooltip>
                                 </Toolbar>
                             </Grid>
                         </Container>

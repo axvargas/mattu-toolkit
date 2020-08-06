@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
-import Dialog from "@material-ui/core/Dialog";
-import ListItemText from "@material-ui/core/ListItemText";
-import ListItem from "@material-ui/core/ListItem";
-import List from "@material-ui/core/List";
-import Divider from "@material-ui/core/Divider";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
+import {
+  Button,
+  Dialog,
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  Slide,
+  Grid,
+  Container
+} from "@material-ui/core";
+
 import CloseIcon from "@material-ui/icons/Close";
-import Slide from "@material-ui/core/Slide";
-import Grid from "@material-ui/core/Grid";
+
 import Tool from "../tool-card";
 
-import PostTemplate from '../disqus';
-//
+
 const useStyles = makeStyles(theme => ({
   appBar: {
     position: "relative"
@@ -34,10 +34,10 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function FullScreenDialog({ tools, subject }) {
+export default function FullScreenDialog({ tools }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-  //const tools = useTools(subjectId);
+
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -45,11 +45,11 @@ export default function FullScreenDialog({ tools, subject }) {
   const handleClose = () => {
     setOpen(false);
   };
-  //console.log(tools);
+
   return (
     <div>
       <Button size="medium" color="primary" onClick={handleClickOpen}>
-        explorar herramienta
+        explorar herramientas
       </Button>
 
       <Dialog
@@ -73,16 +73,15 @@ export default function FullScreenDialog({ tools, subject }) {
             </Typography>
           </Toolbar>
         </AppBar>
-        <div className={classes.root}>
+        <Container>
           <Grid container justify="center" alignItems="center" spacing={3}>
             {tools.map(tool => (
-              <Grid container justify="center" item xs={12} key={tool.id}>
+              <Grid item xl={4} lg={4} md={6} sm={12} xs={12} key={tool.id}>
                 <Tool tool={tool} />
               </Grid>
             ))}
           </Grid>
-        </div>
-        {/* <PostTemplate subject={subject} /> */}
+        </Container>
       </Dialog>
     </div>
   );

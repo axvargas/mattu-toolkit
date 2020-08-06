@@ -11,12 +11,8 @@ import Image from "gatsby-image";
 
 const useStyles = makeStyles({
   root: {
-    //maxWidth: "60%"
-    width: "350px"
+    width: "100%"
   },
-  media: {
-    //paddingTop: "25%" // 16:9
-  }
 });
 
 export default function MediaCard({ subject, tools }) {
@@ -29,7 +25,6 @@ export default function MediaCard({ subject, tools }) {
         component={Image}
         alt={name}
         fluid={image.fluid}
-        className={classes.media}
         title={name}
       />
       <CardContent>
