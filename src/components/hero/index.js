@@ -36,7 +36,9 @@ const ImageHotel = () => {
                                 </Grid>
                                 <Grid item>
                                     <Typography variant="h5" className={classes.typo}>
-                                    Pol Toolkit es una página web que recopila herramientas web organizadas por materia, que buscan ser de ayuda en el desarrollo de las clases virtuales para colegios para docentes y estudiantes.
+                                    Pol Toolkit es una página web que recopila herramientas web 
+                                    que serán de ayuda para el desarrollo de las clases virtuales 
+                                    para colegios, beneficiando tanto a docentes como a estudiantes.
                                     </Typography>
                                 </Grid>
                             </Grid>
@@ -58,7 +60,11 @@ const ImageHotel = () => {
                                     <Typography variant="h3" className={classes.typoP}>Bienvenido!</Typography>
                                 </Grid>
                                 <Grid item>
-                                    <Typography variant="h5" className={classes.typo}>Aquí encontraras las mejores herramientas que te ayudaran en tu vida estudiantil</Typography>
+                                    <Typography variant="h5" className={classes.typo}>
+                                    Pol Toolkit es una página web que recopila herramientas web 
+                                    que serán de ayuda para el desarrollo de las clases virtuales 
+                                    para colegios, beneficiando tanto a docentes como a estudiantes.
+                                      </Typography>
                                 </Grid>
                             </Grid>
                         </Grid>

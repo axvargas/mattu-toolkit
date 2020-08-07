@@ -8,16 +8,30 @@ import Fab from "@material-ui/core/Fab";
 import Tooltip from "@material-ui/core/Tooltip";
 import ThumbsUpDownIcon from '@material-ui/icons/ThumbsUpDown';
 
-
+import { graphql, useStaticQuery } from 'gatsby';
+import Image from "gatsby-image";
 //comoponent import
 import ElevationScroll from './elevationScroll';
 //style imports
 import useStyles from './style';
 const formlink = "https://docs.google.com/forms/d/e/1FAIpQLSeL6p9N1ZwHgiFuzkfel6HObNr1LsRjxPqvdJfu2DVEy-31cw/viewform?usp=sf_link"
-const logoRuta = "../../images/favicon2.png";
+
 const Header = ({ props }) => {
     const classes = useStyles();
-
+    const { image } = useStaticQuery(
+        graphql`
+            query {
+                image: file(relativePath:{eq:"favicon2.png"}){
+                    sharp:childImageSharp{
+                         fluid(quality: 100, maxWidth: 3840){
+                            ...GatsbyImageSharpFluid_withWebp
+                            
+                        }
+                    }
+                }
+            }
+        `
+    );
     return (
         <header>
             <ElevationScroll {...props}>
@@ -26,7 +40,7 @@ const Header = ({ props }) => {
                     <Hidden mdUp>
                         <Grid container justify="center">
                             <Toolbar >
-                                <img src={logoRuta} alt="Logo" />
+                            <Image fluid={image.fluid} alt="sth" className={classes.img} />
                                 <Typography variant="h5" className={classes.typo}>
                                     <GatsbyLink to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}>
                                         Herramientas para tus clases virtuales
@@ -52,7 +66,7 @@ const Header = ({ props }) => {
                                 <Toolbar className={classes.title}>
                                     <Typography variant="h5" className={classes.typo} >
                                         <GatsbyLink to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                            Herramientas para tus clases virtuales
+                                            Pol ToolKit
                                     </GatsbyLink>
                                     </Typography>
                                     <Tooltip title="Ayúdanos a mejorar" aria-label="help" className={classes.tooltip}>

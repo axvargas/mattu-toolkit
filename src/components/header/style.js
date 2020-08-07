@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 'auto',
     marginRight: 0,
   },
+  img: {
+      width: "100%"
+  }
 
 }));
 export default useStyles;
