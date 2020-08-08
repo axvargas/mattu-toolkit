@@ -29,21 +29,21 @@ export default function NestedGrid() {
   return (
     <Container className={classes.top}>
       <Grid container justify="center" alignItems="flex-start" spacing={1}>
-      <Hidden smDown>
-        <Grid item justify="flex-start" alignItems="flex-start" spacing={0} xs={3}>
-          <div>
-            <Typography className={classes.root} color="inherit" variant="h6">
-              {"Tabla de contenido"}
-            </Typography>
-            {subjects.map(e => (<>
-              <Typography className={classes.root}>
-                <Link href={`#${e.name}`} color="inherit" variant="body2">
-                  {e.name}
-                </Link>
+        <Hidden smDown>
+          <Grid item justify="flex-start" alignItems="flex-start" spacing={0} xs={3}>
+            <div>
+              <Typography className={classes.root} color="inherit" variant="h6">
+                {"Tabla de contenido"}
               </Typography>
-            </>))}
-          </div>
-        </Grid>
+              {subjects.map(e => (<>
+                <Typography className={classes.root}>
+                  <Link href={`#${e.name}`} color="inherit" variant="body2">
+                    {e.name}
+                  </Link>
+                </Typography>
+              </>))}
+            </div>
+          </Grid>
         </Hidden>
         <Grid container item justify="center" alignItems="center" direction="row" spacing={3} xs={9}>
           {subjects.map(subject => (
