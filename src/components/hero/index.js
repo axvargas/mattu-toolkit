@@ -29,16 +29,16 @@ const ImageHotel = () => {
                     <Grid container direction="row" justify="center" alignItems="center" spacing={3}>
 
                         <Grid item xl={3} lg={4} md={4} sm={10} xs={10}>
-                            
+
                             <Grid container direction="column" justify="flex-start" alignItems="    " spacing={3} >
                                 <Grid item>
                                     <Typography variant="h3" className={classes.typoP}>Bienvenido!</Typography>
                                 </Grid>
                                 <Grid item>
                                     <Typography variant="h5" className={classes.typo}>
-                                    Pol Toolkit es una página web que recopila herramientas web 
-                                    que serán de ayuda para el desarrollo de las clases virtuales 
-                                    para colegios, beneficiando tanto a docentes como a estudiantes.
+                                        Pol Toolkit es una página web que recopila herramientas web
+                                        que serán de ayuda para el desarrollo de las clases virtuales
+                                        para colegios, beneficiando tanto a docentes como a estudiantes.
                                     </Typography>
                                 </Grid>
                             </Grid>
@@ -61,9 +61,9 @@ const ImageHotel = () => {
                                 </Grid>
                                 <Grid item>
                                     <Typography variant="h5" className={classes.typo}>
-                                    Pol Toolkit es una página web que recopila herramientas web 
-                                    que serán de ayuda para el desarrollo de las clases virtuales 
-                                    para colegios, beneficiando tanto a docentes como a estudiantes.
+                                        Pol Toolkit es una página web que recopila herramientas web
+                                        que serán de ayuda para el desarrollo de las clases virtuales
+                                        para colegios, beneficiando tanto a docentes como a estudiantes.
                                       </Typography>
                                 </Grid>
                             </Grid>

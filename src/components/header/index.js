@@ -40,13 +40,13 @@ const Header = ({ props }) => {
                     <Hidden mdUp>
                         <Grid container justify="center">
                             <Toolbar >
-                            <Image fluid={image.fluid} alt="sth" className={classes.img} />
+                                <Image fluid={image.fluid} alt="sth" className={classes.img} />
                                 <Typography variant="h5" className={classes.typo}>
                                     <GatsbyLink to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                        Herramientas para tus clases virtuales
+                                        Pol ToolKit
                                     </GatsbyLink>
                                 </Typography>
-                                
+
                             </Toolbar>
                             <Toolbar>
                                 <Tooltip title="Ayúdanos a mejorar" aria-label="help" className={classes.tooltip}>
